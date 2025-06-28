@@ -18,7 +18,7 @@ const CreatePage = () => {
         someone,
         something,
       })
-      const generatedLink: string = `${window.location.origin}${ROUTES.PLAY.path}?${queryParams.toString()}`
+      const generatedLink: string = `${window.location.origin}${import.meta.env.BASE_URL}${ROUTES.PLAY.path}?${queryParams.toString()}`
       setLink(generatedLink)
     },
     [setLink],

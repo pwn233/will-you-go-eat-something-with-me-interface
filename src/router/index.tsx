@@ -40,7 +40,7 @@ const router: ReturnType<typeof createBrowserRouter> = createBrowserRouter(
     },
   ],
   {
-    basename: '/will-you-go-eat-something-with-me-interface',
+    basename: import.meta.env.BASE_URL,
   },
 )
 
