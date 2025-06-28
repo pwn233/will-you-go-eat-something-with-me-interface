@@ -7,37 +7,42 @@ import CreatePage from '@/pages/create'
 import HomePage from '@/pages/home'
 import PlayPage from '@/pages/play'
 
-const router: ReturnType<typeof createBrowserRouter> = createBrowserRouter([
+const router: ReturnType<typeof createBrowserRouter> = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: (
+        <>
+          <ScrollRestoration />
+          <Layout />
+          <ToastContainer
+            toastClassName="!bg-primary-300 !text-body-2 !font-bold !w-fit !whitespace-pre-line"
+            closeButton={false}
+            stacked
+            closeOnClick
+          />
+        </>
+      ),
+      children: [
+        {
+          path: ROUTES.HOME.path,
+          element: <HomePage />,
+        },
+        {
+          path: ROUTES.CREATE.path,
+          element: <CreatePage />,
+        },
+        {
+          path: ROUTES.PLAY.path,
+          element: <PlayPage />,
+        },
+      ],
+    },
+  ],
   {
-    path: '/',
-    element: (
-      <>
-        <ScrollRestoration />
-        <Layout />
-        <ToastContainer
-          toastClassName="!bg-primary-300 !text-body-2 !font-bold !w-fit !whitespace-pre-line"
-          closeButton={false}
-          stacked
-          closeOnClick
-        />
-      </>
-    ),
-    children: [
-      {
-        path: ROUTES.HOME.path,
-        element: <HomePage />,
-      },
-      {
-        path: ROUTES.CREATE.path,
-        element: <CreatePage />,
-      },
-      {
-        path: ROUTES.PLAY.path,
-        element: <PlayPage />,
-      },
-    ],
+    basename: '/will-you-go-eat-something-with-me-interface',
   },
-])
+)
 
 const Router = () => {
   return <RouterProvider router={router} />

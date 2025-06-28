@@ -10,5 +10,6 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  base: '/will-you-go-eat-something-with-me-interface',
   plugins: [react(), tailwindcss()],
 })
