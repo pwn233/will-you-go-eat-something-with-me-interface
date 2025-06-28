@@ -14,7 +14,7 @@ import {
 } from './images'
 
 export const MAP_SOMETHING_ASSETS: Record<SOMETHING, ISomethingAssets> = {
-  [SOMETHING.TEENOI]: {
+  [SOMETHING.TEENOI_SUKI]: {
     label: 'Teenoi Suki',
     imageURL: teenoi,
   },
