@@ -8,12 +8,13 @@ import type { IPlayDialogDetail, Maybe } from '@/types'
 import { cn } from '@/utils'
 
 type IContentController = {
+  imgURL: Maybe<string>
   data: Maybe<IPlayDialogDetail>
   onYes: () => void
   onNo: () => void
 }
 
-export const ContentController = ({ data, onYes, onNo }: IContentController) => {
+export const ContentController = ({ data, onYes, onNo, imgURL }: IContentController) => {
   // states
   const [pleaseEmoji, setPleaseEmoji]: [PLEASE_EMOJI_TIER, Dispatch<SetStateAction<PLEASE_EMOJI_TIER>>] =
     useState<PLEASE_EMOJI_TIER>(PLEASE_EMOJI_TIER.TIER1)
@@ -48,6 +49,11 @@ export const ContentController = ({ data, onYes, onNo }: IContentController) => 
   return (
     <div className="flex size-full flex-col gap-y-4">
       <h2 className="capitalize">{data.title}</h2>
+      {imgURL && (
+        <div className="flex size-full items-center justify-center">
+          <img src={imgURL} alt={data.title} className="h-75" />
+        </div>
+      )}
       <div className="flex size-full flex-row items-center justify-start gap-x-4 transition-all duration-1000 ease-in-out [&>button]:w-[calc(50%-8px)]">
         <Button
           ref={refYes}

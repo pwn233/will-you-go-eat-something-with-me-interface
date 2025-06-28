@@ -12,7 +12,7 @@ const drawerContentVariants: ICompVariantConfig<IDialogVariants> = tv({
       default: '',
     },
     size: {
-      default: 'w-110',
+      default: 'w-auto',
     },
     animation: {
       true: '',
@@ -59,7 +59,7 @@ export const Dialog = ({
             <Title />
             <Description />
           </VisuallyHiddenRoot>
-          <div className="text-body-1 flex w-full grow flex-col gap-4 overflow-auto">{children}</div>
+          <div className="text-body-1 no-scrollbar flex w-full grow flex-col gap-4 overflow-auto">{children}</div>
         </Content>
       </Portal>
     </Root>

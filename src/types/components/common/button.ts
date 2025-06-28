@@ -1,7 +1,7 @@
 import type { ButtonHTMLAttributes, RefAttributes } from 'react'
 
 export type IButtonVariants = {
-  variant: 'secondary' | 'vanilla' | 'success' | 'danger'
+  variant: 'primary' | 'secondary' | 'vanilla' | 'success' | 'danger'
   size: 'default'
   block: boolean
 }

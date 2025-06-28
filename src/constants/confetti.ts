@@ -1,9 +1,11 @@
 import type { Options, Shape } from 'canvas-confetti'
 import confetti from 'canvas-confetti'
 
+const { shapeFromText }: typeof confetti = confetti
+
 export const DEFAULT_SCALAR: number = 2
 
-export const DEFAULT_SHAPES: Array<Shape> = [confetti.shapeFromText({ text: '🦄', scalar: DEFAULT_SCALAR })]
+export const DEFAULT_SHAPES: Array<Shape> = [shapeFromText({ text: '🦄', scalar: DEFAULT_SCALAR })]
 
 export const DEFAULT_CONFETTI_OPTIONS: Partial<Options> = {
   spread: 360,
@@ -15,12 +17,12 @@ export const DEFAULT_CONFETTI_OPTIONS: Partial<Options> = {
 }
 
 export const SUCCESS_SHAPES: Array<Shape> = [
-  confetti.shapeFromText({ text: '💖', scalar: DEFAULT_SCALAR }),
-  confetti.shapeFromText({ text: '❤️', scalar: DEFAULT_SCALAR }),
-  confetti.shapeFromText({ text: '💛', scalar: DEFAULT_SCALAR }),
-  confetti.shapeFromText({ text: '💚', scalar: DEFAULT_SCALAR }),
-  confetti.shapeFromText({ text: '💙', scalar: DEFAULT_SCALAR }),
-  confetti.shapeFromText({ text: '💜', scalar: DEFAULT_SCALAR }),
-  confetti.shapeFromText({ text: '💖', scalar: DEFAULT_SCALAR }),
-  confetti.shapeFromText({ text: '💖', scalar: DEFAULT_SCALAR }),
+  shapeFromText({ text: '💖', scalar: DEFAULT_SCALAR }),
+  shapeFromText({ text: '❤️', scalar: DEFAULT_SCALAR }),
+  shapeFromText({ text: '💛', scalar: DEFAULT_SCALAR }),
+  shapeFromText({ text: '💚', scalar: DEFAULT_SCALAR }),
+  shapeFromText({ text: '💙', scalar: DEFAULT_SCALAR }),
+  shapeFromText({ text: '💜', scalar: DEFAULT_SCALAR }),
+  shapeFromText({ text: '💖', scalar: DEFAULT_SCALAR }),
+  shapeFromText({ text: '💖', scalar: DEFAULT_SCALAR }),
 ]

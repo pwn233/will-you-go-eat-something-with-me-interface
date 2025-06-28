@@ -12,6 +12,7 @@ const buttonVariants: ICompVariantConfig<IButtonVariants> = tv({
       false: 'inline-block w-fit',
     },
     variant: {
+      primary: 'bg-primary-500 hover:bg-primary-600 text-primary-800',
       secondary: 'bg-secondary-500 hover:bg-secondary-600 text-secondary-800',
       vanilla: 'border-transparent',
       success: 'bg-button-success hover:bg-button-success-hover',

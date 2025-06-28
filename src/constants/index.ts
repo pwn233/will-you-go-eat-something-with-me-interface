@@ -1,4 +1,6 @@
 export * from './confetti'
+export * from './images'
 export * from './play'
 export * from './routes'
+export * from './something'
 export * from './toast'
